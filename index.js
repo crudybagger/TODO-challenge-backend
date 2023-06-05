@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('*', (req, res) => {
-    if(req.body.list.length > 0) {
+    if(req.body.list !== "[]") {
         res.json(req.body);
     } else {
         res.json({list : ["l@zy_H@cK3r"]});
